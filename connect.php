@@ -2,7 +2,7 @@
 
 $connect = mysqli_connect(
     'localhost',
-    'root',
+    'sandbox',
     'password',
     'brickmmo_votes'
 );
