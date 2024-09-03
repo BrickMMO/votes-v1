@@ -17,23 +17,26 @@ $connect = mysqli_connect(
   <body>
     <h1>Web Dev Art Comp 2024</h1>
 
-    <p>Welcome to the official Web Dev Art Comp 2024. Make your vote below:</p>
+    <h2>Comp Results</h2>
 
     <?php
 
-    $query = 'SELECT * FROM groups';
+    $query = 'SELECT *,(
+            SELECT COUNT(*)
+            FROM votes
+            WHERE votes.group_id = groups.id
+        ) AS votes
+        FROM groups';
     $result = mysqli_query($connect, $query);
 
     while($record = mysqli_fetch_assoc($result))
     {
-      echo '<a href="vote.php?id='.$record['id'].'">'.$record['name'].'</a>';
+      echo $record['name'].' - '.$record['votes'];
       echo '<br>';
     }
     
 
     ?>
-
-    <h2>http://codeadam.infinityfreeapp.com/</h2>
 
     <hr>
 

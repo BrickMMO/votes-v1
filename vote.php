@@ -17,23 +17,20 @@ $connect = mysqli_connect(
   <body>
     <h1>Web Dev Art Comp 2024</h1>
 
-    <p>Welcome to the official Web Dev Art Comp 2024. Make your vote below:</p>
+    <p>Your vote has been recorded!</p>
 
     <?php
 
-    $query = 'SELECT * FROM groups';
+    $query = 'INSERT INTO votes (
+            group_id
+        ) VALUES (
+            "'.$_GET['id'].'"
+        )';
     $result = mysqli_query($connect, $query);
-
-    while($record = mysqli_fetch_assoc($result))
-    {
-      echo '<a href="vote.php?id='.$record['id'].'">'.$record['name'].'</a>';
-      echo '<br>';
-    }
-    
 
     ?>
 
-    <h2>http://codeadam.infinityfreeapp.com/</h2>
+    <p><a href="results.php">View Results</a></p>
 
     <hr>
 
