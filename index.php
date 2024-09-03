@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You</title>
+    <title>Web Dev Art Comp 2024</title>
   </head>
   <body>
-    <h1>Thank You!</h1>
+    <h1>Web Dev Art Comp 2024</h1>
+
+    <p>Welcome to the official Web Dev Art Comp 2024. Make your vote below:</p>
   </body>
 </html>
