@@ -9,5 +9,10 @@
     <h1>Web Dev Art Comp 2024</h1>
 
     <p>Welcome to the official Web Dev Art Comp 2024. Make your vote below:</p>
+
+
+    <hr>
+
+    Copyright Web Dev Comp 2024 | Adam Thomas
   </body>
 </html>
